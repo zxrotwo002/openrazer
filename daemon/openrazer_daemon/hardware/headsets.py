@@ -177,3 +177,22 @@ class RazerKrakenKittyEdition(__RazerDeviceBrightnessSuspend):
     MATRIX_DIMS = [1, 4]
 
     DEVICE_IMAGE = "https://assets2.razerzone.com/images/pnx.assets/1c503aa176bc82d999299aba0d6c7d2c/kraken-kitty-quartz.png"
+
+
+class RazerKrakenKittyEditionV2(__RazerDeviceBrightnessSuspend):
+    """
+    Class for the Razer Kraken Kitty Edition V2
+    """
+    EVENT_FILE_REGEX = re.compile(r'.*Razer_Kraken_Kitty_Chroma_Control_V2_0+-event-if03')
+    USB_VID = 0x1532
+    USB_PID = 0x0560
+    METHODS = ['get_device_type_headset',
+               'set_none_effect', 'set_static_effect', 'set_breath_random_effect', 'set_breath_single_effect',
+               'set_breath_dual_effect', 'set_starlight_random_effect', 'set_starlight_single_effect',
+               'set_starlight_dual_effect', 'set_wave_effect', 'set_spectrum_effect',
+               'set_custom_effect', 'set_key_row',
+               'set_brightness', 'get_brightness']
+    HAS_MATRIX = True
+    MATRIX_DIMS = [1, 2]
+    
+    DEVICE_IMAGE = "https://assets2.razerzone.com/images/pnx.assets/02971915a5544d9172fa949153be5937/kraken-kitty-v2-500x500-quartz.png"
